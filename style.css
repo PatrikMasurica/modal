@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to top left, aquamarine, lightgreen);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* The buttons to open modal*/
+.show-modal {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    padding: 1.7rem 3rem;
+    border-radius: 10rem;
+    border: none;
+    margin: 5rem 2rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.show-modal:hover {
+    background-color: #ddd;
+}
+
+/* The modal window */
+.modal {
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 5rem;
+    z-index: 5;
+    box-shadow: 0 5rem 3rem rgba(0, 0, 0, 0.7);
+}
+
+.modal h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2.2rem;
+}
+
+.modal p {
+    font-size: 1.7rem;
+    color: #444;
+}
+
+/*The X button inside modal */
+.close-modal {
+    font-size: 5rem;
+    color: #333;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+/* The blur background when modal opens*/
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+}
+
+/* This class will be used to hide the modal when the button or overlay is clicked, or if esc key is pressed */
+.hidden {
+    display: none;
+}
